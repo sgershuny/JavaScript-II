@@ -3,7 +3,21 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
+const list_add = () =>{
+  let the_list = [];
+  
+  let count = 0;
+  return function(){
+    ++count;
+    the_list.push(count);
+    return the_list;
+  };
+};
 
+new_list = list_add();
+
+console.log(new_list());
+console.log(new_list());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
